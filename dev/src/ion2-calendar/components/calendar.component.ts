@@ -222,7 +222,7 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
   }
 
   canBack(): boolean {
-    if (!this._d.from || this._view !== 'days' || this._options.canBackwardsSelected) return true;
+    if (!this._d.from || this._view !== 'days') return true;
     return this.monthOpt.original.time > moment(this._d.from).valueOf();
   }
 
