@@ -144,7 +144,7 @@ var CalendarComponent = /** @class */ (function () {
         this.monthOpt = this.createMonth(backTime);
     };
     CalendarComponent.prototype.canBack = function () {
-        if (!this._d.from || this._view !== 'days')
+        if (!this._d.from || this._view !== 'days' || this._options.canBackwardsSelected)
             return true;
         return this.monthOpt.original.time > moment(this._d.from).valueOf();
     };
